@@ -1,4 +1,4 @@
--*- mode: org; mode: visual-line; -*-
+=-*- mode: org; mode: visual-line; -*-=
 #+STARTUP: indent
 
 * =manxome=
