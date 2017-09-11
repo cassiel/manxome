@@ -10,6 +10,7 @@
                  [org.clojure/clojurescript "1.9.908"]
                  [jarohen/chord "0.8.1"]
                  [com.taoensso/sente "1.11.0"]
+                 [cljsjs/socket-io "2.0.1-0"]
                  [org.clojure/core.async  "0.3.443"]]
 
   :plugins [[lein-figwheel "0.5.13"]
