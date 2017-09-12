@@ -1,6 +1,7 @@
 (ns user
   (:require [chord.client :refer [ws-ch]]
             [taoensso.sente  :as sente :refer (cb-success?)]
+            [cljsjs.socket-io]
             [cljs.core.async :as async :refer [<! >! put! close!]])
   (:require-macros [cljs.core.async.macros :refer [go]]))
 
@@ -27,7 +28,7 @@
 ;; SENTE
 
 (let [{:keys [chsk ch-recv send-fn state]}
-      (sente/make-channel-socket! "/" :host "localhost:8081" ; Note the same path as before
+      (sente/make-channel-socket! "/" :host "localhost:8081"
        {:type :auto ; e/o #{:auto :ajax :ws}
        })]
   (def chsk       chsk)
@@ -54,3 +55,9 @@
 
 
 (js/console.log (take 20 (deref A)))
+
+
+
+(def socket (io.connect "http://localhost:8081"))
+
+(.on socket "bit" #(js/console.log %))

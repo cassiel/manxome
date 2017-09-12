@@ -1,5 +1,5 @@
 (ns net.cassiel.manxome.core
-    (:require ))
+    (:require [cljsjs.socket-io]))
 
 (enable-console-print!)
 
