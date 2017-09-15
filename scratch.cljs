@@ -1,6 +1,8 @@
 (ns user
   (:require [chord.client :refer [ws-ch]]
-            [cljs.core.async :as async :refer [<! >! put! close!]])
+            [cljs.core.async :as async :refer [<! >! put! close!]]
+            [oops.core :refer [oget oset! ocall oapply ocall! oapply!
+                               oget+ oset!+ ocall+ oapply+ ocall!+ oapply!+]]            )
   (:require-macros [cljs.core.async.macros :refer [go]]))
 
 (def A (atom nil))
@@ -43,3 +45,14 @@
 (.send x "get_scene")
 
 (.close x)
+
+
+;; ---
+
+(def x #js {})
+
+(js/console.log x)
+
+(oset! x :!mood 3)
+
+x

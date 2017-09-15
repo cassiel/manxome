@@ -8,6 +8,7 @@
 
   :dependencies [[org.clojure/clojure "1.9.0-alpha17"]
                  [org.clojure/clojurescript "1.9.908"]
+                 [binaryage/oops "0.5.6"]
                  [jarohen/chord "0.8.1"]
                  [net.cassiel/lifecycle "0.1.0-SNAPSHOT"]
                  [org.clojure/core.async  "0.3.443"]]
