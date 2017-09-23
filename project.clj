@@ -48,7 +48,17 @@
                 :compiler {:output-to "resources/public/js/compiled/manxome.js"
                            :main net.cassiel.manxome.core
                            :optimizations :advanced
-                           :pretty-print false}}]}
+                           :pretty-print false}}
+               {:id "server-dev"
+                :source-paths ["server_src"]
+                :figwheel true
+                :compiler {:main net.cassiel.server.core
+                           :output-to "target/server_out/figwheel4node_server_with_figwheel.js"
+                           :output-dir "target/server_out"
+                           :target :nodejs
+                           :optimizations :none
+                           :source-map true}}
+               ]}
 
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"
              ;; :server-port 3449 ;; default
